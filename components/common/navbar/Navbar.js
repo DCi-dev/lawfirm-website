@@ -25,8 +25,10 @@ function Navbar() {
 							</span>
 						</a>
 					</Link>
+
+					{/* Menu */}
 					<button
-						className=' inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-blue ml-auto hover:text-blue outline-none'
+						className=' inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-blue mx-auto hover:text-blue outline-none'
 						onClick={handleClick}>
 						<svg
 							className='w-6 h-6'
@@ -47,29 +49,38 @@ function Navbar() {
 						className={`${
 							active ? "" : "hidden"
 						}   w-full lg:inline-flex lg:flex-grow lg:w-auto`}>
-						<div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
+						<div className='lg:inline-flex lg:flex-row lg:mx-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
 							<Link href='/'>
-								<a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-blue font-bold items-center justify-center hover:bg-green-600 hover:text-gold '>
+								<a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-blue hover:text-ivory '>
 									Acasa
 								</a>
 							</Link>
 							<Link href='/'>
-								<a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-blue font-bold items-center justify-center hover:bg-green-600 hover:text-gold'>
-									Despre noi
+								<a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-blue hover:text-ivory'>
+									Echipa noastră
 								</a>
 							</Link>
 							<Link href='/'>
-								<a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-blue font-bold items-center justify-center hover:bg-green-600 hover:text-gold'>
+								<a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-blue hover:text-ivory'>
 									Domenii de practica
 								</a>
 							</Link>
 							<Link href='/'>
-								<a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-blue font-bold items-center justify-center hover:bg-green-600 hover:text-gold'>
+								<a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-blue hover:text-ivory'>
 									Contact
 								</a>
 							</Link>
 						</div>
 					</div>
+					{/* Click to Dial button */}
+					<a
+						href='tel:+40758513642'
+						data-rel='external'
+						className='inline-flex items-center p-2 mr-4'>
+						<button className='inline-flex items-center bg-blue border-0 py-1 px-3 focus:outline-none hover:bg-gold rounded text-base shadow-xl'>
+							<span className='text-white'>Sună-ne!</span>
+						</button>
+					</a>
 				</nav>
 			</div>
 		</>
