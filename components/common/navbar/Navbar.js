@@ -10,7 +10,7 @@ function Navbar() {
 
 	return (
 		<>
-			<div className='fixed top-0 left-0 w-full bg-white'>
+			<div className='fixed top-0 left-0 w-full bg-white z-10'>
 				<nav className='flex items-center flex-wrap  p-3 max-w-7xl mx-auto'>
 					<Link href='/'>
 						<a className='inline-flex items-center p-2 mr-4 '>

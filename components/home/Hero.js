@@ -6,10 +6,10 @@ export default function Hero() {
 	return (
 		<>
 			<div className='bg-blue h-full pt-20 '>
-				<div className='flex sm:flex-col lg:flex-row items-center lg:items-end justify-around px-20 '>
+				<div className='flex sm:flex-col lg:flex-row items-center lg:items-end justify-around px-3 max-w-7xl mx-auto'>
 					<div className='flex flex-col my-auto lg:w-6/12 w-auto text-center'>
-						<p className='text-5xl text-white mt-8'>BUN VENIT LA</p>
-						<h1 className='text-gold text-9xl font-bold'>MPP</h1>
+						<p className='text-5xl text-white mt-8 uppercase'>Bun venit la</p>
+						<h1 className='text-gold text-9xl font-bold uppercase'>Mpp</h1>
 						<p className='text-xl text-white w-auto mt-4'>
 							Misiunea noastră este să ne folosim experiența și cunoașterea
 							temeinică a teoriei și practicii juridice pentru a oferi soluții
