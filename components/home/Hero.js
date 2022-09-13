@@ -21,8 +21,8 @@ export default function Hero() {
 								className='mx-auto mt-8 mb-8 inline-block
 							bg-gold border-0 py-5 px-5 focus:outline-none hover:bg-ivory 
 							rounded-2xl text-base hover:text-black shadow-lg text-center'>
-								<span className='text-black  font-body text-xl'>
-									CERE O CONSULTAȚIE
+								<span className='text-black  font-body text-lg uppercase font-bold'>
+									Cere o consultație
 								</span>
 							</button>
 						</Link>
