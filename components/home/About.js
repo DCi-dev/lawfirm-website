@@ -1,7 +1,7 @@
 export default function About() {
 	return (
 		<>
-			<div className='bg-black py-16 px-3'>
+			<div className='bg-black py-16 px-4'>
 				<div className='text-center  max-w-7xl mx-auto'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -14,10 +14,8 @@ export default function About() {
 							clipRule='evenodd'
 						/>
 					</svg>
-					<h2 className='text-5xl text-gold'>
-						Manolache, Pădurariu & Partners
-					</h2>
-					<p className='italic text-lg text-ivory mt-3'>
+					<h2 className='text-gold'>Manolache, Pădurariu & Partners</h2>
+					<p className='italic text-ivory mt-3'>
 						O echipă dinamică, consolidată în timp, formată din profesionişti cu
 						experienţă în litigii şi consultanţă, pregătită pentru a găsi
 						soluţia juridică optimă, adaptată necesităţii clienţilor noştri.
