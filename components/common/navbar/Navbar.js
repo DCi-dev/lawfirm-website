@@ -10,7 +10,7 @@ function Navbar() {
 
 	return (
 		<>
-			<div className='fixed top-0 left-0 w-full bg-white z-10'>
+			<div className='fixed top-0 left-0 w-full bg-white z-50 mb-4'>
 				<nav className='flex items-center flex-wrap  p-3 max-w-7xl mx-auto'>
 					<Link href='/'>
 						<a className='inline-flex items-center p-2 mr-4 '>
@@ -55,17 +55,17 @@ function Navbar() {
 									Acasa
 								</a>
 							</Link>
-							<Link href='/'>
+							<Link href='/echipa'>
 								<a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-blue hover:text-ivory'>
 									Echipa noastră
 								</a>
 							</Link>
-							<Link href='/'>
+							<Link href='/domenii-de-practica'>
 								<a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-blue hover:text-ivory'>
 									Domenii de practica
 								</a>
 							</Link>
-							<Link href='/'>
+							<Link href='/contact'>
 								<a className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black font-bold items-center justify-center hover:bg-blue hover:text-ivory'>
 									Contact
 								</a>
