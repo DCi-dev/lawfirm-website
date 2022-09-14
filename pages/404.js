@@ -3,14 +3,14 @@ import Link from "next/link";
 export default function FourOhFour() {
 	return (
 		<>
-			<section class='flex items-center h-screen p-16 bg-ivory'>
-				<div class='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
-					<div class='max-w-xl text-center'>
-						<h2 class='mb-8 font-bold text-9xl '>Error 404</h2>
-						<p class='text-2xl font-semibold md:text-3xl'>
+			<section className='flex items-center h-screen p-16 bg-ivory'>
+				<div className='container flex flex-col items-center justify-center px-5 mx-auto my-8'>
+					<div className='max-w-xl text-center'>
+						<h2 className='mb-8 font-bold text-9xl '>Error 404</h2>
+						<p className='text-2xl font-semibold md:text-3xl'>
 							Nu ați încălcat legea, dar nu putem găsi ceea ce căutați.
 						</p>
-						<p class='mt-4 mb-8'>
+						<p className='mt-4 mb-8'>
 							Dar nu vă faceți griji, puteți găsi o mulțime de alte lucruri pe
 							pagina noastră de pornire.
 						</p>

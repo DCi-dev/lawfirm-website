@@ -1,7 +1,7 @@
 export default function About() {
 	return (
 		<>
-			<div className='bg-black py-16 px-6 lg:px-0'>
+			<div className='bg-black py-16 px-6'>
 				<div className='text-center  max-w-7xl mx-auto'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'

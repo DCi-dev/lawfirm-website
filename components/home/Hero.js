@@ -6,8 +6,8 @@ export default function Hero() {
 	return (
 		<>
 			<section className='bg-blue'>
-				<div className='grid max-w-7xl px-4 pt-24 mx-auto lg:gap-8 xl:gap-0 lg:pt-16 lg:grid-cols-12'>
-					<div className='mr-auto place-self-center lg:col-span-7'>
+				<div className='grid max-w-7xl px-8 pt-24 mx-auto md:gap-8 xl:gap-0 h-full lg:h-screen 2xl:h-full md:grid-cols-12'>
+					<div className='mr-auto place-self-center md:col-span-6'>
 						<p className='max-w-2xl  font-light text-ivory text-lg  md:text-2xl lg:text-4xl uppercase'>
 							Bun venit la
 						</p>
@@ -39,7 +39,7 @@ export default function Hero() {
 							</button>
 						</Link>
 					</div>
-					<div className='hidden lg:mt-0 lg:col-span-5 lg:flex'>
+					<div className='hidden md:mt-0 md:col-span-6 md:flex '>
 						<Image src={heroPic} />
 					</div>
 				</div>

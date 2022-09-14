@@ -54,28 +54,28 @@ function Navbar() {
 							<Link href='/'>
 								<a
 									onClick={handleClick}
-									className='block py-2 pr-4 pl-3 text-black font-bold rounded hover:text-ivory hover:bg-blue md:hover:bg-transparent md:hover:text-blue md:p-0'>
-									Acasa
+									className='block py-2 pr-4 pl-3 text-lg text-black font-bold rounded hover:text-ivory hover:bg-blue md:hover:bg-transparent md:hover:text-blue md:p-0'>
+									Acasă
 								</a>
 							</Link>
 							<Link href='/echipa'>
 								<a
 									onClick={handleClick}
-									className='block py-2 pr-4 pl-3 text-black  font-bold rounded hover:text-ivory hover:bg-blue md:hover:bg-transparent md:hover:text-blue md:p-0'>
+									className='block py-2 pr-4 pl-3 text-lg text-black  font-bold rounded hover:text-ivory hover:bg-blue md:hover:bg-transparent md:hover:text-blue md:p-0'>
 									Echipa noastră
 								</a>
 							</Link>
 							<Link href='/domenii-de-practica'>
 								<a
 									onClick={handleClick}
-									className='block py-2 pr-4 pl-3 text-black  font-bold rounded hover:text-ivory hover:bg-blue md:hover:bg-transparent md:hover:text-blue md:p-0'>
+									className='block py-2 pr-4 pl-3 text-lg text-black  font-bold rounded hover:text-ivory hover:bg-blue md:hover:bg-transparent md:hover:text-blue md:p-0'>
 									Domenii de practica
 								</a>
 							</Link>
 							<Link href='/contact'>
 								<a
 									onClick={handleClick}
-									className='block py-2 pr-4 pl-3 text-black  font-bold rounded hover:text-ivory hover:bg-blue md:hover:bg-transparent md:hover:text-blue md:p-0'>
+									className='block py-2 pr-4 pl-3 text-lg text-black  font-bold rounded hover:text-ivory hover:bg-blue md:hover:bg-transparent md:hover:text-blue md:p-0'>
 									Contact
 								</a>
 							</Link>
