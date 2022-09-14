@@ -5,33 +5,44 @@ import heroPic from "../../public/assets/images/hero.png";
 export default function Hero() {
 	return (
 		<>
-			<div className='bg-blue h-full pt-20 '>
-				<div className='flex sm:flex-col lg:flex-row items-center lg:items-end justify-around px-3 max-w-7xl mx-auto'>
-					<div className='flex flex-col my-auto lg:w-6/12 w-auto text-center'>
-						<p className='text-5xl text-white mt-8 uppercase'>Bun venit la</p>
-						<h1 className='text-gold text-9xl font-bold uppercase'>Mpp</h1>
-						<p className='text-xl text-white w-auto mt-4'>
+			<section className='bg-blue'>
+				<div className='grid max-w-7xl px-4 pt-24 mx-auto lg:gap-8 xl:gap-0 lg:pt-16 lg:grid-cols-12'>
+					{/* <div className='flex sm:flex-col lg:flex-row items-center lg:items-end justify-around px-3 max-w-7xl mx-auto'> */}
+					<div className='mr-auto place-self-center lg:col-span-7'>
+						<p className='max-w-2xl  font-light text-ivory text-lg  md:text-2xl lg:text-4xl uppercase'>
+							Bun venit la
+						</p>
+						<h1 className='max-w-2xl mb-4 text-6xl text-gold font-bold tracking-tight leading-none md:text-7xl xl:text-9xl uppercase'>
+							Mpp
+						</h1>
+						<p className='max-w-2xl mb-6 font-light text-ivory lg:mb-8 md:text-lg lg:text-xl'>
 							Misiunea noastră este să ne folosim experiența și cunoașterea
 							temeinică a teoriei și practicii juridice pentru a oferi soluții
 							adaptate situației fiecărui client, cu profesionalism, rigoare și
 							integritate.
 						</p>
 						<Link href='/contact'>
-							<button
-								className='mx-auto mt-8 mb-8 inline-block
-							bg-gold border-0 py-5 px-5 focus:outline-none hover:bg-ivory 
-							rounded-2xl text-base hover:text-black shadow-lg text-center'>
-								<span className='text-black  font-body text-lg uppercase font-bold'>
-									Cere o consultație
-								</span>
+							<button className='inline-flex items-center justify-center px-5 py-3 mr-3 mb-8 text-base font-bold text-center text-black rounded-lg bg-gold hover:bg-ivory focus:ring-4 focus:ring-primary-300 uppercase'>
+								Cere o consultație
+								<svg
+									class='w-5 h-5 ml-2 -mr-1'
+									fill='currentColor'
+									viewBox='0 0 20 20'
+									xmlns='http://www.w3.org/2000/svg'>
+									<path
+										fill-rule='evenodd'
+										d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
+										clip-rule='evenodd'></path>
+								</svg>
 							</button>
 						</Link>
 					</div>
-					<div className='w-6/12 hidden lg:flex flex-col items-end'>
+					<div className='hidden lg:mt-0 lg:col-span-5 lg:flex'>
 						<Image src={heroPic} />
 					</div>
 				</div>
-			</div>
+				{/* </div> */}
+			</section>
 		</>
 	);
 }
