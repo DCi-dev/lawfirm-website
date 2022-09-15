@@ -1,138 +1,52 @@
-// For handling input states
-import { useState } from "react";
-
-// For display toasts
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
+import Head from "next/head";
+import ContactForm from "../../components/common/contact-form/contactForm";
+import { MdEmail } from "react-icons/md";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { FaLocationArrow } from "react-icons/fa";
 
 export default function Contact() {
-	// Input states
-	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
-	const [purpose, setPurpose] = useState("");
-	const [message, setMessage] = useState("");
-
-	// Form submit handler
-	const submitForm = async (e) => {
-		e.preventDefault();
-		const res = await fetch("http://localhost:3000/api/submit-form", {
-			method: "POST",
-			body: JSON.stringify({ name, email, purpose, message }),
-		});
-		// Success if status code is 201
-		if (res.status === 201) {
-			toast("Mulțumim pentru mesaj! Te vom contacta în curând", {
-				type: "success",
-			});
-		} else {
-			toast("Ne pare rău, dar nu am primit mesajul!", { type: "error" });
-		}
-	};
-
 	return (
 		<>
-			<div className='bg-ivory pt-12'>
-				<ToastContainer />
-				<div className='py-8 lg:py-16 px-4 mx-auto max-w-screen-md'>
-					<h1 className='mb-4 text-4xl tracking-tight font-bold text-center'>
-						Lăsați-ne un mesaj
-					</h1>
-					<p className='mb-8 lg:mb-16 text-center text-gray sm:text-xl'>
-						Got a technical issue? Want to send feedback about a beta feature?
-						Need details about our Business plan? Let us know.
+			<Head>
+				<title>Contact</title>
+			</Head>
+			<div className='bg-black'>
+				<div className='max-w-7xl px-8 pt-32 pb-8 mx-auto text-center text-ivory'>
+					<h1 className='text-gold'>Contact</h1>
+					<p>
+						Societatea noastră îşi desfăşoră activitatea atât în cadrul biroului
+						din Iași cât şi în județele conexe, tocmai pentru a fi cât mai
+						aproape de clienţii noştri şi pentru a veni în întâmpinarea
+						necesităţilor acestora. Ne puteţi contacta folosind informaţiile de
+						mai jos sau formularul de contact.
 					</p>
-					<form className='space-y-8' onSubmit={submitForm}>
-						<div>
-							<label htmlFor='name' className='block mb-2 text-lg text-black'>
-								Nume Prenume
-							</label>
-							<input
-								type='text'
-								id='name'
-								name='name'
-								placeholder='John Doe'
-								value={name}
-								onChange={(e) => setName(e.target.value)}
-								required
-								className='shadow-sm bg-white border border-gray 
-								text-gray text-lg rounded-lg focus:ring-gold 
-								focus:border-blue block w-full p-2.5'
-							/>
-						</div>
-						<div>
+					<div>
+						<div className='grid grid-cols-1 gap-6 md:grid-cols-3 xl:grid-cols-3 py-10 px-6'>
 							<div>
-								<label
-									htmlFor='email'
-									className='block mb-2 text-lg text-black'>
-									Adresa de e-mail
-								</label>
-								<input
-									type='email'
-									name='email'
-									placeholder='alexandru@example.io'
-									value={email}
-									onChange={(e) => setEmail(e.target.value)}
-									required
-									className='shadow-sm bg-white border border-gray 
-								text-gray text-lg rounded-lg focus:ring-gold 
-								focus:border-blue block w-full p-2.5'
-								/>
+								<FaLocationArrow className='w-12 h-12 -mb-6 mx-auto text-gold' />
+								<h3 className='text-ivory'>Adresă</h3>
+								<p className='text-2xl'>Strada Tătărași 9, Iași, România</p>
 							</div>
 							<div>
-								<label
-									htmlFor='purpose'
-									className='block mb-2 mt-2 text-lg text-black'>
-									Avocați
-								</label>
-								<select
-									name='purpose'
-									id='purpose'
-									value={purpose}
-									onChange={(e) => setPurpose(e.target.value)}
-									className='bg-white border border-gray text-black text-lg rounded-lg focus:ring-gold focus:border-blue block w-full p-2.5'>
-									<option value='' disabled required>
-										Alege unu partener
-									</option>
-									<option defaultValue value='General'>
-										General
-									</option>
-									<option value='David Padurariu'>
-										David Alexandru Pădurariu
-									</option>
-									<option value='Eduard Manolache'>Eduard Manolache</option>
-									<option value='Anamaria Bita'>Anamaria Biță</option>
-								</select>
+								<BsFillTelephoneFill className='w-12 h-12 -mb-6 mx-auto text-gold' />
+								<h3 className='text-ivory'>Telefon</h3>
+								<a href='tel:+40752171727' data-rel='external'>
+									<p className='text-2xl text-gold'>0752 171 727</p>
+								</a>
+							</div>
+							<div>
+								<MdEmail className='w-12 h-12 -mb-6 mx-auto text-gold' />
+								<h3 className='text-ivory'>E-mail</h3>
+								<a href='mailto:contact@mpp.ro' data-rel='external'>
+									<p className='text-2xl text-gold'>contact@mpp.ro</p>
+								</a>
 							</div>
 						</div>
-						<div>
-							<label
-								htmlFor='message'
-								className='block mb-2 text-lg text-black'>
-								Mesaj
-							</label>
-							<textarea
-								name='message'
-								id='message'
-								rows='5'
-								placeholder='Bună ziua, vreau să vă contactez pentru...'
-								value={message}
-								onChange={(e) => setMessage(e.target.value)}
-								required
-								className='shadow-sm bg-white border border-gray= 
-								text-gray text-lg rounded-lg focus:ring-gold 
-								focus:border-blue block w-full p-2.5'></textarea>
-						</div>
-						<button
-							className='py-3 px-5 text-xl
-							text-center text-white rounded-lg bg-blue 
-							sm:w-fit hover:bg-gold focus:ring-4 
-							focus:outline-none focus:ring-primary-300'
-							type='submit'>
-							Trimite
-						</button>
-					</form>
+					</div>
 				</div>
 			</div>
+
+			<ContactForm />
 		</>
 	);
 }

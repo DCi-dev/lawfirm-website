@@ -4,7 +4,7 @@ import { areasData } from "../../pages/api/domeniiData";
 function PracticeAreas() {
 	return (
 		<>
-			<div className='py-10 px-3 bg-ivory'>
+			<div className='py-10 px-3 bg-ivory overflow-hidden'>
 				<div className='max-w-7xl mx-auto'>
 					<h2 className='text-black text-center mb-8'>Domenii de practică</h2>
 					<div className='mt-10'>

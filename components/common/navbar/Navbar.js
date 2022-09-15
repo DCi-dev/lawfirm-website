@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 function Navbar() {
 	const [active, setActive] = useState(false);
@@ -11,7 +12,7 @@ function Navbar() {
 
 	return (
 		<>
-			<nav className='bg-ivory px-2 sm:px-4 py-2.5  fixed w-screen z-20 top-0 left-0 border-b border-gold'>
+			<nav className='bg-ivory px-2 sm:px-4 py-2.5  fixed w-screen z-20 top-0 left-0 border-b border-gold overflow-hidden'>
 				<div className='container flex flex-wrap justify-between items-center mx-auto max-w-7xl'>
 					<Link href='/'>
 						<a className='flex items-center'>
@@ -23,8 +24,12 @@ function Navbar() {
 					<div className='flex md:order-2'>
 						{/* Click to Dial button */}
 						<button className='text-white bg-blue hover:bg-gold focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 hover:scale-105 transform transition duration-300 ease-in-out'>
-							<a href='tel:+40758513642' data-rel='external'>
-								<span className='text-white'>Sună-ne!</span>
+							<a
+								href='tel:+40752171727'
+								data-rel='external'
+								className='flex flex-row justify-between items-center'>
+								<BsFillTelephoneFill />
+								<span className='text-white ml-1'>Sună-ne!</span>
 							</a>
 						</button>
 						<button
