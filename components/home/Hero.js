@@ -6,7 +6,7 @@ export default function Hero() {
 	return (
 		<>
 			<section className='bg-blue'>
-				<div className='grid max-w-7xl px-8 pt-24 mx-auto md:gap-8 xl:gap-0 h-full lg:h-screen 2xl:h-full md:grid-cols-12'>
+				<div className='grid max-w-7xl px-8 pt-24 mx-auto md:gap-8 xl:gap-0 h-full  md:grid-cols-12'>
 					<div className='mr-auto place-self-center md:col-span-6'>
 						<p className='max-w-2xl  font-light text-ivory text-lg  md:text-2xl lg:text-4xl uppercase'>
 							Bun venit la

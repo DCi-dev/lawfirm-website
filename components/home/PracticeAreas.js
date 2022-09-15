@@ -1,4 +1,4 @@
-import CardAreas from "../common/ui/CardAreas/CardAreas";
+import CardAreas from "../common/ui/card/CardAreas";
 import { areasData } from "../../pages/api/domeniiData";
 
 function PracticeAreas() {

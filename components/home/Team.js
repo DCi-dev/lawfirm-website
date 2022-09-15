@@ -3,7 +3,7 @@ import CarouselAvocati from "../common/ui/carousel/carouselAvocati";
 function Team() {
 	return (
 		<>
-			<div className='bg-gold py-16 px-4'>
+			<div className='bg-gold py-2 px-4'>
 				<h2 className='text-center'>Echipa noastră</h2>
 				<CarouselAvocati />
 			</div>
