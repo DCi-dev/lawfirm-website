@@ -1,7 +1,18 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function CardAvocati({ title, name, slug, image }) {
+import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
+
+export default function CardAvocati({
+	title,
+	name,
+	slug,
+	image,
+	description,
+	facebook,
+	linkedin,
+}) {
 	const router = useRouter();
 	function showAreas() {
 		router.push(`/echipa/avocati/${slug}`);
@@ -9,22 +20,36 @@ export default function CardAvocati({ title, name, slug, image }) {
 
 	return (
 		<>
-			<div
-				onClick={showAreas}
-				key={name}
-				className='rounded-md  relative hover:scale-105
-        transform transition duration-300 ease-in-out bg-black
-        overflow-hidden flex flex-col text-center'
-				style={{
-					boxShadow:
-						"rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px",
-				}}>
-				<div className='overflow-hidden relative p-0 m-0  w-full bg-ivory'>
-					<Image src={image} alt={name} />
+			<div className='max-w-sm bg-black rounded-lg shadow-md hover:scale-105 transform transition duration-300 ease-in-out'>
+				<div onClick={showAreas} key={name} className='cursor-pointer'>
+					<div className='relative p-0 m-0 rounded-t-lg w-full bg-ivory lg:grayscale lg:hover:grayscale-0'>
+						<Image src={image} alt={name} />
+					</div>
 				</div>
-				<div className='py-4 px-2 w-full '>
-					<h3 className='leading-10 text-ivory '>{name}</h3>
-					<p className='mt-2 text-gray'>{title}</p>
+				<div className='p-5'>
+					<div onClick={showAreas} key={name} className='cursor-pointer'>
+						<h4 className='my-2 text-2xl font-bold tracking-tight text-gold hover:text-white'>
+							{name}
+						</h4>
+					</div>
+					<p className='mb-3 font-normal text-ivory'>{title}</p>
+					<p className='mb-3 font-normal text-white'>{description}</p>
+					<ul className='flex space-x-4 sm:mt-0'>
+						<li>
+							<Link href={facebook}>
+								<div className='cursor-pointer text-gold hover:text-ivory'>
+									<FaFacebookSquare className='w-8 h-8' />
+								</div>
+							</Link>
+						</li>
+						<li>
+							<Link href={linkedin}>
+								<div className='cursor-pointer text-gold hover:text-ivory'>
+									<FaLinkedin className='w-8 h-8' />
+								</div>
+							</Link>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</>
