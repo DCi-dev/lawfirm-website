@@ -61,10 +61,10 @@ function Footer() {
 										</a>
 									</li>
 									<li>
-										<a href='mailto:contact@mpp.ro' data-rel='external'>
+										<a href='mailto:office@mpp.ro' data-rel='external'>
 											<p className='flex flex-row justify-start items-center'>
 												<MdEmail className='w-5 h-5' />
-												<span className='ml-2 text-gold'>contact@mpp.ro</span>
+												<span className='ml-2 text-gold'>office@mpp.ro</span>
 											</p>
 										</a>
 									</li>
