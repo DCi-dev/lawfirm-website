@@ -17,7 +17,7 @@ function Footer() {
 							frameBorder: "0",
 						}}
 						className='width-full border-0 h-auto'
-						src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJP3CVY4T7ykARAeY9c2zETuU&key=AIzaSyCSqXIo1eMBZ3-zxkGvzY5l0NhfsCh-_fU`}></iframe>
+						src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJP3CVY4T7ykARAeY9c2zETuU&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}`}></iframe>
 				</div>
 				<div>
 					<div className='md:flex md:justify-between mx-auto max-w-7xl p-4 sm:p-6'>
