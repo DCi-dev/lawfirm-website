@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-export default function CardAreas({ title, text, slug }) {
+export default function CardAreas({ title, subtitle, slug }) {
 	const router = useRouter();
 	function showAreas() {
 		router.push(`/domenii-de-practica/${slug}`);
@@ -17,7 +17,7 @@ export default function CardAreas({ title, text, slug }) {
 						"rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px",
 				}}>
 				<h3 className='leading-10 text-black'>{title}</h3>
-				<p className='mt-2 text-gray'>{text}</p>
+				<p className='mt-2 text-gray'>{subtitle}</p>
 			</button>
 		</>
 	);

@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import CardAreas from "../../components/common/ui/card/CardAreas";
-import { areasData } from "../../pages/api/domeniiData";
+import { domeniiData } from "../../pages/api/domeniiData";
 
 export default function Areas() {
 	return (
@@ -52,10 +52,10 @@ export default function Areas() {
 				<div className='max-w-7xl mx-auto'>
 					<div className='mt-10'>
 						<div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4 pb-10  lg:pb-10 px-6'>
-							{areasData.map((item, index) => (
+							{domeniiData.map((item, index) => (
 								<CardAreas
 									title={item.title}
-									text={item.text}
+									subtitle={item.subtitle}
 									slug={item.slug}
 									key={item.title + index}
 								/>
