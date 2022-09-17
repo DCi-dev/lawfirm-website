@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 export default function ContactForm() {
 	// Input states
 	const [name, setName] = useState("");
-	const [email, setEmail] = useState("");
+	const [phone, setPhone] = useState("");
 	const [purpose, setPurpose] = useState("");
 	const [message, setMessage] = useState("");
 
@@ -17,7 +17,7 @@ export default function ContactForm() {
 		e.preventDefault();
 		const res = await fetch("http://localhost:3000/api/submit-form", {
 			method: "POST",
-			body: JSON.stringify({ name, email, purpose, message }),
+			body: JSON.stringify({ name, phone, purpose, message }),
 		});
 		// Success if status code is 201
 		if (res.status === 201) {
@@ -62,16 +62,18 @@ export default function ContactForm() {
 						<div>
 							<div>
 								<label
-									htmlFor='email'
+									htmlFor='phone'
 									className='block mb-2 text-lg text-black'>
-									Adresa de e-mail
+									Număr de telefon
 								</label>
 								<input
-									type='email'
-									name='email'
-									placeholder='alexandru@example.io'
-									value={email}
-									onChange={(e) => setEmail(e.target.value)}
+									type='text'
+									name='phone'
+									placeholder='0745123456'
+									minLength='10'
+									maxLength='10'
+									value={phone}
+									onChange={(e) => setPhone(e.target.value)}
 									required
 									className='shadow-sm bg-white border border-gray 
 								text-gray text-lg rounded-lg focus:ring-gold 
@@ -100,7 +102,7 @@ export default function ContactForm() {
 										David Alexandru Pădurariu
 									</option>
 									<option value='Eduard Manolache'>Eduard Manolache</option>
-									<option value='Anamaria Bita'>Anamaria Biță</option>
+									<option value='Anamaria Bita'>Maria-Teodora Bița</option>
 								</select>
 							</div>
 						</div>

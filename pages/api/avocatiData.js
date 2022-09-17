@@ -96,7 +96,7 @@ export const avocatiData = [
 		],
 	},
 	{
-		name: "Maria Biță",
+		name: "Maria-Teodora Bița",
 		title: "Avocat colaborator",
 		slug: "maria-bita",
 		image: david,
