@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { FaLocationArrow, FaFacebookSquare, FaLinkedin } from "react-icons/fa";
+import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
 import { AiFillStar } from "react-icons/ai";
 
 function HeroAvocat(props) {
@@ -55,13 +55,15 @@ function HeroAvocat(props) {
 						</p>
 						<div className='grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-2 mb-6 '>
 							{props.avocat.domain.map((item, index) => (
-								<p
-									className='mb-6 text-black md:text-lg flex flex-row justify-start items-center'
+								<Link
 									item={item}
-									key={item + index}>
-									<AiFillStar className='w-5 h-5 mr-1' />
-									{item}
-								</p>
+									key={item + index}
+									href={`/domenii-de-practica/${item.slug}`}>
+									<p className='mb-6 text-black md:text-lg flex flex-row justify-start items-center cursor-pointer'>
+										<AiFillStar className='w-5 h-5 mr-1' />
+										{item.title}
+									</p>
+								</Link>
 							))}
 						</div>
 					</div>

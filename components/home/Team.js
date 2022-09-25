@@ -1,4 +1,4 @@
-import CarouselAvocati from "../common/ui/carousel/carouselAvocati";
+import CarouselAvocati from "../common/ui/carousel/CarouselAvocati";
 
 function Team() {
 	return (

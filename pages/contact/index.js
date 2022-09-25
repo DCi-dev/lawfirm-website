@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ContactForm from "../../components/common/contact-form/contactForm";
+import ContactForm from "../../components/common/contact-form/ContactForm";
 import { MdEmail } from "react-icons/md";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaLocationArrow } from "react-icons/fa";

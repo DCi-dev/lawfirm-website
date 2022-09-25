@@ -1,4 +1,8 @@
 import david from "../../public/assets/images/hero.png";
+import { DreptPenal } from "../domenii/dreptPenal";
+import { DreptCivil } from "../domenii/dreptCivil";
+import { DreptAdministrativ } from "../domenii/dreptAdministrativ";
+import { DreptFiscal } from "../domenii/dreptFiscal";
 
 export const DavidP = {
 	name: "David Alexandru Pădurariu",
@@ -12,16 +16,7 @@ export const DavidP = {
 	facebook: "https://www.facebook.com/david.padurariu",
 	linkedin: "https://www.linkedin.com/in/david-alexandru-padurariu-602745b1/",
 	bio: "John is the leader of the Working Group on International Taxation & EU Harmonization in UK at the American Chamber of Commerce. He is also the Committee Head of the Permanent Scientific Committee of IFA. During 2011 John served as the Co-Chair of the Tax Committee of the American Chamber of Commerce and was the member of the working group on VAT reform at the Ministry of Finance of United Kingdom.",
-	domain: [
-		"Dreptul familiei",
-		"Dreptul muncii",
-		"Dreptul proprietății intelectuale",
-	],
-	domainSlug: [
-		"dreptul-familiei",
-		"dreptul-muncii",
-		"dreptul-proprietatii-intelectuale",
-	],
+	domain: [DreptPenal, DreptCivil, DreptAdministrativ, DreptFiscal],
 	education: [
 		{
 			title: "Master în drept - UAIC - Cariere juridice",
