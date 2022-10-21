@@ -1,7 +1,8 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-import CardAreas from "../../components/common/ui/card/CardAreas";
-import { domeniiData } from "../../pages/api/domeniiData";
+import CardAreas from '../../components/common/ui/card/CardAreas';
+import CTA from '../../components/common/ui/Cta';
+import { domeniiData } from '../../pages/api/domeniiData';
 
 export default function Areas() {
 	return (
@@ -48,7 +49,7 @@ export default function Areas() {
 				</div>
 			</section>
 			{/* Domenii */}
-			<section className='py-10 px-3 bg-ivory overflow-hidden'>
+			<section className='py-10 px-3 bg-white overflow-hidden'>
 				<div className='max-w-7xl mx-auto'>
 					<div className='mt-10'>
 						<div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4 pb-10  lg:pb-10 px-6'>
@@ -64,6 +65,7 @@ export default function Areas() {
 					</div>
 				</div>
 			</section>
+			<CTA />
 		</>
 	);
 }

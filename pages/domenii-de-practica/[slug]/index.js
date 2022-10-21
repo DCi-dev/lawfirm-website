@@ -1,12 +1,10 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+import Head from 'next/head';
 
-import { domeniiData } from "../../api/domeniiData";
+import { domeniiData } from '../../api/domeniiData';
 
-import HeroArea from "../../../components/areaPage/HeroArea";
-import PrezentareArea from "../../../components/areaPage/PrezentareArea";
-import CTA from "../../../components/common/ui/cta/cta";
+import HeroArea from '../../../components/areaPage/HeroArea';
+import PrezentareArea from '../../../components/areaPage/PrezentareArea';
+import CTA from '../../../components/common/ui/Cta';
 
 function Area(props) {
 	return (

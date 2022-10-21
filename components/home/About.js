@@ -1,13 +1,15 @@
-import { FaBalanceScale } from "react-icons/fa";
+import { FaBalanceScale } from 'react-icons/fa';
 
 export default function About() {
 	return (
 		<>
-			<div className='bg-black py-16 px-6 overflow-hidden'>
-				<div className='text-center  max-w-7xl mx-auto'>
+			<div className='bg-black py-16 px-6 overflow-hidden min-h-screen flex justify-center items-center'>
+				<div className='text-left  max-w-7xl mx-auto'>
 					<FaBalanceScale className='w-14 h-14 mx-auto text-gold' />
-					<h2 className='text-gold'>Manolache, Pădurariu & Partners</h2>
-					<p className='italic text-ivory mt-3'>
+					<h2 className='text-gold text-center'>
+						Manolache, Pădurariu & Partners
+					</h2>
+					<p className='italic text-white text-center mt-3'>
 						O echipă dinamică, consolidată în timp, formată din profesionişti cu
 						experienţă în litigii şi consultanţă, pregătită pentru a găsi
 						soluţia juridică optimă, adaptată necesităţii clienţilor noştri.

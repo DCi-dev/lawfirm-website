@@ -1,8 +1,8 @@
-import { useRouter } from "next/router";
-import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
+import { FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
 
 export default function CardAvocati({
 	title,
@@ -22,7 +22,7 @@ export default function CardAvocati({
 		<>
 			<div className='max-w-sm bg-black rounded-lg shadow-md hover:scale-105 transform transition duration-300 ease-in-out'>
 				<div onClick={showAreas} key={name} className='cursor-pointer'>
-					<div className='relative p-0 m-0 rounded-t-lg w-full bg-ivory lg:grayscale lg:hover:grayscale-0'>
+					<div className='relative p-0 m-0 rounded-t-lg w-full bg-gold lg:grayscale lg:hover:grayscale-0'>
 						<Image src={image} alt={name} />
 					</div>
 				</div>
@@ -32,19 +32,19 @@ export default function CardAvocati({
 							{name}
 						</h4>
 					</div>
-					<p className='mb-3 font-normal text-ivory'>{title}</p>
+					<p className='mb-3 font-normal text-white'>{title}</p>
 					<p className='mb-3 font-normal text-white'>{description}</p>
 					<ul className='flex space-x-4 sm:mt-0'>
 						<li>
 							<Link href={facebook}>
-								<div className='cursor-pointer text-gold hover:text-ivory'>
+								<div className='cursor-pointer text-gold hover:text-white'>
 									<FaFacebookSquare className='w-8 h-8' />
 								</div>
 							</Link>
 						</li>
 						<li>
 							<Link href={linkedin}>
-								<div className='cursor-pointer text-gold hover:text-ivory'>
+								<div className='cursor-pointer text-gold hover:text-white'>
 									<FaLinkedin className='w-8 h-8' />
 								</div>
 							</Link>

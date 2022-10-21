@@ -1,16 +1,16 @@
-import Image from "next/image";
-import Link from "next/link";
-import { MdEmail } from "react-icons/md";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { FaFacebookSquare, FaLinkedin } from "react-icons/fa";
-import { AiFillStar } from "react-icons/ai";
+import Image from 'next/image';
+import Link from 'next/link';
+import { MdEmail } from 'react-icons/md';
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import { FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
+import { AiFillStar } from 'react-icons/ai';
 
 function HeroAvocat(props) {
 	return (
 		<>
-			<section className='bg-ivory pt-8'>
+			<section className='bg-white pt-8'>
 				<div className='gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6'>
-					<Image src={props.avocat.image} />
+					<Image src={props.avocat.image} alt={`avocat ${props.avocat.name}`} />
 					{/* Prezentare avocat */}
 					<div className='mt-4 md:mt-0'>
 						<h2 className='mb-4 text-4xl tracking-tight font-bold text-black '>
@@ -24,27 +24,31 @@ function HeroAvocat(props) {
 							<MdEmail className='w-5 h-5 mr-1' />
 							Email:
 							<a href={`mailto:${props.avocat.email}`} data-rel='external'>
-								<span className='ml-2 text-gold'>{props.avocat.email}</span>
+								<span className='ml-2 text-gold hover:underline'>
+									{props.avocat.email}
+								</span>
 							</a>
 						</p>
 						<p className='mb-6 font-bold text-black md:text-lg flex flex-row justify-start items-center'>
 							<BsFillTelephoneFill className='w-5 h-5 mr-1' />
 							Telefon:
 							<a href={`tel:+4${props.avocat.telefon}`} data-rel='external'>
-								<span className='ml-2 text-gold'>{props.avocat.telefon}</span>
+								<span className='ml-2 text-gold hover:underline'>
+									{props.avocat.telefon}
+								</span>
 							</a>
 						</p>
 						<ul className='flex space-x-4 sm:mt-0 mb-6 '>
 							<li>
 								<Link href={props.avocat.facebook}>
-									<div className='cursor-pointer text-gold hover:text-blue'>
+									<div className='cursor-pointer text-gold hover:text-black'>
 										<FaFacebookSquare className='w-8 h-8' />
 									</div>
 								</Link>
 							</li>
 							<li>
 								<Link href={props.avocat.linkedin}>
-									<div className='cursor-pointer text-gold hover:text-blue'>
+									<div className='cursor-pointer text-gold hover:text-black'>
 										<FaLinkedin className='w-8 h-8' />
 									</div>
 								</Link>
@@ -59,7 +63,7 @@ function HeroAvocat(props) {
 									item={item}
 									key={item + index}
 									href={`/domenii-de-practica/${item.slug}`}>
-									<p className='mb-6 text-black md:text-lg flex flex-row justify-start items-center cursor-pointer'>
+									<p className='mb-6 text-black md:text-lg flex flex-row justify-start items-center cursor-pointer hover:underline'>
 										<AiFillStar className='w-5 h-5 mr-1' />
 										{item.title}
 									</p>

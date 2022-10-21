@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Hero from "../components/home/Hero";
-import About from "../components/home/About";
-import PracticeAreas from "../components/home/PracticeAreas";
-import Team from "../components/home/Team";
-import CTA from "../components/common/ui/cta/cta";
+import Head from 'next/head';
+import Hero from '../components/home/Hero';
+import About from '../components/home/About';
+import PracticeAreas from '../components/home/PracticeAreas';
+import Team from '../components/home/Team';
+import CTA from '../components/common/ui/Cta';
 
 export default function Home() {
 	return (

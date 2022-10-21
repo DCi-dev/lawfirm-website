@@ -1,10 +1,10 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-import { avocatiData } from "../../../api/avocatiData";
+import { avocatiData } from '../../../api/avocatiData';
 
-import HeroAvocat from "../../../../components/avocatPage/HeroAvocati";
-import PrezentareAvocat from "../../../../components/avocatPage/PrezentareAvocat";
-import CTA from "../../../../components/common/ui/cta/cta";
+import HeroAvocat from '../../../../components/avocatPage/HeroAvocati';
+import PrezentareAvocat from '../../../../components/avocatPage/PrezentareAvocat';
+import CTA from '../../../../components/common/ui/Cta';
 
 function Avocat(props) {
 	return (

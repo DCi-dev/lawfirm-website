@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
 export default function CardAreas({ title, subtitle, slug }) {
 	const router = useRouter();
@@ -11,13 +11,13 @@ export default function CardAreas({ title, subtitle, slug }) {
 			<button
 				onClick={showAreas}
 				key={title}
-				className='rounded-2xl px-4 py-8 relative hover:scale-105 transform transition duration-300 ease-in-out overflow-hidden'
+				className='rounded-2xl px-4 py-8 relative bg-white hover:scale-105 transform transition duration-300 ease-in-out overflow-hidden'
 				style={{
 					boxShadow:
-						"rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px",
+						'rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px',
 				}}>
 				<h3 className='leading-10 text-black'>{title}</h3>
-				<p className='mt-2 text-gray'>{subtitle}</p>
+				<p className='mt-2 text-black'>{subtitle}</p>
 			</button>
 		</>
 	);
